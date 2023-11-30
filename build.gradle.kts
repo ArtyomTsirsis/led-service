@@ -30,6 +30,11 @@ dependencies {
 	implementation("com.pi4j:pi4j-plugin-pigpio:2.3.0")
 }
 
+tasks.withType<JavaCompile> {
+	sourceCompatibility = "17"
+	targetCompatibility = "17"
+}
+
 tasks.withType<KotlinCompile> {
 	kotlinOptions {
 		freeCompilerArgs += "-Xjsr305=strict"
